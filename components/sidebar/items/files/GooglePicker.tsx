@@ -27,14 +27,14 @@ const GooglePicker: FC<GooglePickerProps> = ({ onFileSelect }) => {
     gapi.load("client:auth2", () => {
       gapi.client
         .init({
-          apiKey: "AIzaSyCfXvne6fHQONNfGlnJf2XJVC-mueFzbck"
+          apiKey: "GOOGLE_API_KEY"
         })
         .then(() => {
           let tokenInfo = gapi.auth.getToken()
           const pickerConfig: any = {
             clientId:
-              "336247810256-7uveqa8vsl10cm5ht8nfajrueh87qb4v.apps.googleusercontent.com",
-            developerKey: "AIzaSyCfXvne6fHQONNfGlnJf2XJVC-mueFzbck",
+              "GOOGLE_CLIENT_ID.apps.googleusercontent.com",
+            developerKey: "GOOGLE_API_KEY",
             viewId: "DOCS",
             viewMimeTypes:
               "image/jpeg,image/png,image/gif,application/pdf,text/plain,application/vnd.openxmlformats-officedocument.wordprocessingml.document",
